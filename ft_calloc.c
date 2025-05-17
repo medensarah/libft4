@@ -6,7 +6,7 @@
 /*   By: smedenec <smedenec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 18:36:35 by smedenec          #+#    #+#             */
-/*   Updated: 2025/05/05 01:38:35 by smedenec         ###   ########.fr       */
+/*   Updated: 2025/05/17 15:10:40 by smedenec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,14 +28,13 @@ void	*ft_calloc(size_t nmemb, size_t size)
 		ptr[i++] = 0;
 	return ((void *)ptr);
 }
+// int	main(void)
+// {
+// 	size_t	nmemb;
+// 	size_t	size;
 
-int	main(void)
-{
-	size_t	nmemb;
-	size_t	size;
-
-	nmemb = 3;
-	size = 600;
-	printf("%s\n", (char *)ft_calloc(nmemb, size));
-	return (0);
-}
+// 	nmemb = 3;
+// 	size = 600;
+// 	printf("%s\n", (char *)ft_calloc(nmemb, size));
+// 	return (0);
+// }

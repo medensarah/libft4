@@ -6,7 +6,7 @@
 /*   By: smedenec <smedenec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 18:36:35 by smedenec          #+#    #+#             */
-/*   Updated: 2025/05/05 07:42:43 by smedenec         ###   ########.fr       */
+/*   Updated: 2025/05/17 15:10:10 by smedenec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,14 +67,14 @@ char	*ft_strjoin(char *s1, char *s2)
 	str[j + k] = '\0';
 	return (str);
 }
-int	main(void)
-{
-	char	s1[] = "aaa";
-	char	s2[] = "eee";
-	char	*str;
+// int	main(void)
+// {
+// 	char	s1[] = "aaa";
+// 	char	s2[] = "eee";
+// 	char	*str;
 
-	str = ft_strjoin(s1, s2);
-	printf("%s\n", str);
-	free(str);
-	return (0);
-}
+// 	str = ft_strjoin(s1, s2);
+// 	printf("%s\n", str);
+// 	free(str);
+// 	return (0);
+// }

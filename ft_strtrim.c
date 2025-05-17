@@ -6,7 +6,7 @@
 /*   By: smedenec <smedenec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 18:36:35 by smedenec          #+#    #+#             */
-/*   Updated: 2025/05/15 18:11:12 by smedenec         ###   ########.fr       */
+/*   Updated: 2025/05/17 15:12:04 by smedenec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,10 +57,10 @@ int	trim_end(char *s1, char *set, int len)
 
 char	*ft_strtrim(char *s1, char *set)
 {
-	int	e;
-	int	start;
-	int	end;
-	int	len;
+	int		e;
+	int		start;
+	int		end;
+	int		len;
 	char	*trim;
 
 	e = 0;
@@ -83,15 +83,14 @@ char	*ft_strtrim(char *s1, char *set)
 	trim[e] = '\0';
 	return (trim);
 }
+// int    main(void)
+// {
+//     char    s1[] = "eraseUperase";
+//     char    set[] = "erase";
+//     char    *cpy;
 
-int    main(void)
-{
-    char    s1[] = "eraseUperase";
-    char    set[] = "erase";
-    char    *cpy;
-
-    cpy = ft_strtrim(s1, set);
-    printf("%s\n", cpy);
-    free(cpy);
-    return (0);
-}
+//     cpy = ft_strtrim(s1, set);
+//     printf("%s\n", cpy);
+//     free(cpy);
+//     return (0);
+// }

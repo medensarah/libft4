@@ -6,7 +6,7 @@
 /*   By: smedenec <smedenec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 18:36:35 by smedenec          #+#    #+#             */
-/*   Updated: 2025/05/05 07:31:49 by smedenec         ###   ########.fr       */
+/*   Updated: 2025/05/17 15:09:52 by smedenec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,17 +46,17 @@ char	*ft_substr(char *s, unsigned int start, size_t len)
 	str[j] = '\0';
 	return (str);
 }
-int	main(void)
-{
-	char			s[] = "Push_swap&Pipex";
-	unsigned int	start;
-	size_t			len;
-	char			*str;
+// int	main(void)
+// {
+// 	char			s[] = "Push_swap&Pipex";
+// 	unsigned int	start;
+// 	size_t			len;
+// 	char			*str;
 
-	start = 3;
-	len = 3;
-	str = ft_substr(s, start, len);
-	printf("%s\n", str);
-	free(str);
-	return (0);
-}
+// 	start = 3;
+// 	len = 3;
+// 	str = ft_substr(s, start, len);
+// 	printf("%s\n", str);
+// 	free(str);
+// 	return (0);
+// }
