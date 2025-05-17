@@ -6,7 +6,7 @@
 /*   By: smedenec <smedenec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/17 13:35:53 by smedenec          #+#    #+#             */
-/*   Updated: 2025/05/17 17:42:52 by smedenec         ###   ########.fr       */
+/*   Updated: 2025/05/17 17:50:33 by smedenec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,7 @@ char	**ft_split(char *s, char c)
 		array[count][z] = '\0';
 		count++;
 	}
-	array[count] = '\0';
+	array[count] = "\0";
 	return (array);
 }
 int	main(void)
@@ -97,6 +97,6 @@ int	main(void)
 
 	c = ' ';
 	cpy = ft_split(s, c);
-	printf("all split = %s\n", cpy[2]);
+	printf("a split = %s\n", cpy[2]);
 	return (0);
 }
