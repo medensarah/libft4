@@ -6,12 +6,12 @@
 /*   By: smedenec <smedenec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/17 13:35:53 by smedenec          #+#    #+#             */
-/*   Updated: 2025/05/17 15:12:18 by smedenec         ###   ########.fr       */
+/*   Updated: 2025/05/17 17:42:52 by smedenec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <string.h>
+#include <stdlib.h>
 
 int	ft_strlen(char *str)
 {
@@ -42,31 +42,61 @@ int	ft_count_words(char *s, char c)
 			return (words);
 		i++;
 	}
+	return (words);
 }
 
-char	**ft_split(char const *s, char c)
+char	**ft_split(char *s, char c)
 {
-	int	i;
-	int	w;
+	int		i;
+	int		y;
+	int		z;
+	int		words;
+	int		count;
+	char	**array;
 
 	i = 0;
-	w = 0;
-	while (s[i])
+	count = 0;
+	words = ft_count_words(s, c);
+	if (words == 0)
+		return (NULL);
+	array = (char**)malloc(sizeof(char *)*(words + 1));
+	if (array == NULL)
+		return (NULL);
+	while (count < words)
 	{
-		if (s[i] == c)
-			return (0);
-		else
-			w++;
+		while (s[i] == c)
+			i++;
+		y = 0;
+		while ((s[i] != c) && s[i])
+		{
+			i++;
+			y++;
+		}
+		i = i - y;
+		array[count] = (char*)malloc(sizeof(char)*(y + 1));
+		if (array[count] == NULL)
+			return (NULL);
+		z = 0;
+		while (y--)
+		{
+			array[count][z] = s[i];
+			i++;
+			z++;
+		}
+		array[count][z] = '\0';
+		count++;
 	}
+	array[count] = '\0';
+	return (array);
 }
-// int	main(void)
-// {
-// 	char	s[] = " f0  f1 f1b f2 f4 f6 ";
-// 	char	c;
-// 	char	**cpy;
+int	main(void)
+{
+	char	s[] = " f0  f1 f1b f2 f4 f6";
+	char	c;
+	char	**cpy;
 
-// 	c = ' ';
-// 	cpy = ft_split(s, c);
-// 	printf("all split = %s\n", cpy[0]);
-// 	return (0);
-// }
+	c = ' ';
+	cpy = ft_split(s, c);
+	printf("all split = %s\n", cpy[2]);
+	return (0);
+}
