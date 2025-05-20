@@ -6,7 +6,7 @@
 /*   By: smedenec <smedenec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/17 13:35:53 by smedenec          #+#    #+#             */
-/*   Updated: 2025/05/17 17:50:33 by smedenec         ###   ########.fr       */
+/*   Updated: 2025/05/20 18:23:44 by smedenec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ char	**ft_split(char *s, char c)
 	words = ft_count_words(s, c);
 	if (words == 0)
 		return (NULL);
-	array = (char**)malloc(sizeof(char *)*(words + 1));
+	array = (char **)malloc(sizeof(char *) *(words + 1));
 	if (array == NULL)
 		return (NULL);
 	while (count < words)
@@ -73,9 +73,16 @@ char	**ft_split(char *s, char c)
 			y++;
 		}
 		i = i - y;
-		array[count] = (char*)malloc(sizeof(char)*(y + 1));
+		array[count] = (char *)malloc(sizeof(char) *(y + 1));
 		if (array[count] == NULL)
+		{
+			while (count >= 0)
+			{
+				free(array[count]);
+				count--;
+			}
 			return (NULL);
+		}
 		z = 0;
 		while (y--)
 		{
@@ -86,17 +93,32 @@ char	**ft_split(char *s, char c)
 		array[count][z] = '\0';
 		count++;
 	}
-	array[count] = "\0";
+	array[count] = NULL;
 	return (array);
 }
 int	main(void)
 {
-	char	s[] = " f0  f1 f1b f2 f4 f6";
+	char	s[] = "  f0 f2  f4 ";
 	char	c;
+	int		i;
 	char	**cpy;
 
 	c = ' ';
+	i = 0;
 	cpy = ft_split(s, c);
-	printf("a split = %s\n", cpy[2]);
+	if (cpy)
+	{
+		while (cpy[i])
+		{
+		printf("a split = %s\n", cpy[i]);
+		free(cpy[i]);
+		i++;
+		}
+		free(cpy);
+	}
+	else
+	{
+		printf("a split = %s\n", (char *)cpy);
+	}
 	return (0);
 }
