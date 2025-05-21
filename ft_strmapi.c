@@ -1,66 +1,56 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: smedenec <smedenec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/20 23:02:07 by smedenec          #+#    #+#             */
-/*   Updated: 2025/05/21 02:10:30 by smedenec         ###   ########.fr       */
+/*   Created: 2025/05/21 02:05:26 by smedenec          #+#    #+#             */
+/*   Updated: 2025/05/21 04:50:53 by smedenec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
 
-int	len_int(int n)
+int	ft_strlen(char *str)
 {
 	int	i;
 
 	i = 0;
-	if (n == 0)
+	while (str[i])
 		i++;
-	while (n > 0)
-	{
-		n = n / 10;
-		i++;
-	}
 	return (i);
 }
 
-char	*ft_itoa(int n)
+// char	ft_assign(unsigned int i, char c)
+// {
+// 	return c;
+// }
+char	*ft_strmapi(char *s, char (*f)(unsigned int, char))
 {
-	char	*str_nbr;
-	int		len;
-	int		neg;
+	char			*dest;
+	unsigned int	i;
 
-	neg = 0;
-	if (n < 0)
-	{
-		neg = 1;
-		n = n * -1;
-	}
-	len = len_int(n);
-	str_nbr = malloc(sizeof(char) * (len + neg + 1));
-	if (str_nbr == NULL)
+	i = 0;
+	if (!f || !s)
 		return (NULL);
-	str_nbr[len + neg] = '\0';
-	while (len--)
+	dest = malloc(sizeof(char) *(ft_strlen(s) + 1));
+	if (dest == NULL)
+		return (NULL);
+	while (s[i])
 	{
-		str_nbr[len + neg] = n % 10 + 48;
-		n = n / 10;
+		dest[i] = f(i, s[i]);
+		i++;
 	}
-	if (neg)
-		str_nbr[0] = '-';
-	return (str_nbr);
+	dest[i] = '\0';
+	return (dest);
 }
 // int	main(void)
 // {
-// 	int		nbr;
-// 	char	*str;
+// 	char	str[] = "Hackathon";
 
-// 	nbr = 519;
-// 	str = ft_itoa(nbr);
-// 	printf("le int = %s\n", str);
+// 	char *cpy = ft_strmapi(str, ft_assign);
+// 	printf("le int = %s\n", cpy);
 // 	return(0);
 // }
