@@ -3,24 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smedenec <smedenec@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 18:36:35 by smedenec          #+#    #+#             */
-/*   Updated: 2025/05/05 02:44:40 by smedenec         ###   ########.fr       */
+/*   Updated: 2025/05/25 06:40:25 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+// #include <string.h>
+// #include <stdio.h>
 
-int	ft_strlen(char *str)
-{
-	int	i;
+// int	ft_strlen(const char *str)
+// {
+// 	int	i;
 
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
+// 	i = 0;
+// 	while (str[i])
+// 		i++;
+// 	return (i);
+// }
+
+#include "libft.h"
 
 size_t	ft_strlcat(char *dst, char *src, size_t size)
 {
@@ -29,14 +32,10 @@ size_t	ft_strlcat(char *dst, char *src, size_t size)
 
 	d = ft_strlen(dst);
 	s = ft_strlen(src);
-	if (!d)
-		return (s);
-	if (!s)
-		return (d);
 	if (s >= d)
 	{
 		s = 0;
-		while (src[s] && size--)
+		while (src[s] && --size)
 		{
 			dst[d + s] = src[s];
 			s++;
@@ -45,7 +44,7 @@ size_t	ft_strlcat(char *dst, char *src, size_t size)
 		return (d + s);
 	}
 	else
-		return (size + s);
+		return (d + s);
 }
 // int	main(void)
 // {

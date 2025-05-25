@@ -3,27 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smedenec <smedenec@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 18:36:35 by smedenec          #+#    #+#             */
-/*   Updated: 2025/05/17 15:12:04 by smedenec         ###   ########.fr       */
+/*   Updated: 2025/05/25 06:26:20 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
-int	ft_strlen(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
-
-int	in_set(char c, char *set)
+static int	in_set(char c, char *set)
 {
 	while (*set)
 	{
@@ -34,7 +23,7 @@ int	in_set(char c, char *set)
 	return (0);
 }
 
-int	trim_start(char *s1, char *set)
+static int	trim_start(char *s1, char *set)
 {
 	int	o;
 
@@ -44,7 +33,7 @@ int	trim_start(char *s1, char *set)
 	return (o);
 }
 
-int	trim_end(char *s1, char *set, int len)
+static int	trim_end(char *s1, char *set, int len)
 {
 	int	u;
 

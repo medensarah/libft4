@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smedenec <smedenec@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 18:05:43 by smedenec          #+#    #+#             */
-/*   Updated: 2025/04/28 17:21:48 by smedenec         ###   ########.fr       */
+/*   Updated: 2025/05/23 20:30:24 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 char	*ft_strnstr(char *s1, char *s2, size_t n)
 {
@@ -33,13 +32,11 @@ char	*ft_strnstr(char *s1, char *s2, size_t n)
 	}
 	return (NULL);
 }
-/*
-int	main(void)
-{
-	char	s1[] = "c'est parlant";
-	char	s2[] = "parl";
+// int	main(void)
+// {
+// 	char	s1[] = "c'est parlant";
+// 	char	s2[] = "parl";
 
-	printf("%s\n", ft_strnstr(s1, s2, 7));
-	return (0);
-}
-*/
+// 	printf("%s\n", ft_strnstr(s1, s2, 7));
+// 	return (0);
+// }

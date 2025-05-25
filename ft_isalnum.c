@@ -3,16 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smedenec <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 12:42:09 by smedenec          #+#    #+#             */
-/*   Updated: 2025/04/23 13:26:00 by smedenec         ###   ########.fr       */
+/*   Updated: 2025/05/23 20:40:26 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-/*
-#include <stdio.h>
-#include <ctype.h>
-*/
+
+#include "libft.h"
+
 int	ft_isalnum(int c)
 {
 	if (((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
@@ -21,9 +20,7 @@ int	ft_isalnum(int c)
 	else
 		return (0);
 }
-/*
-int	main(void)
-{
-	printf("is = %d\nreal = %d\n", ft_isalnum(120), isalnum(120));
-}
-*/
+// int	main(void)
+// {
+// 	printf("is = %d\nreal = %d\n", ft_isalnum(120), isalnum(120));
+// }

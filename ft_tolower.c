@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smedenec <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 15:46:09 by smedenec          #+#    #+#             */
-/*   Updated: 2025/04/23 15:55:22 by smedenec         ###   ########.fr       */
+/*   Updated: 2025/05/23 20:29:12 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-/*
-#include <stdio.h>
-*/
+
+#include "libft.h"
+
 int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
@@ -19,9 +19,8 @@ int	ft_tolower(int c)
 	else
 		return (c);
 }
-/*
-int	main(void)
-{
-	printf("return = %d\n", ft_tolower('O'));
-}
-*/
+
+// int	main(void)
+// {
+// 	printf("return = %d\n", ft_tolower('O'));
+// }

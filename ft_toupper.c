@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smedenec <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 14:39:31 by smedenec          #+#    #+#             */
-/*   Updated: 2025/04/23 15:25:40 by smedenec         ###   ########.fr       */
+/*   Updated: 2025/05/23 21:09:53 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-/*
-#include <stdio.h>
-*/
+
+#include "libft.h"
+
 int	ft_toupper(int c)
 {
 	if ((c >= 'a' && c <= 'z'))
@@ -19,9 +19,8 @@ int	ft_toupper(int c)
 	else
 		return (c);
 }
-/*
-int	main(void)
-{
-	printf("return = %d\n", ft_toupper(100));
-}
-*/
+
+// int	main(void)
+// {
+// 	printf("return = %d\n", ft_toupper(100));
+// }

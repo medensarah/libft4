@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smedenec <smedenec@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 16:49:19 by smedenec          #+#    #+#             */
-/*   Updated: 2025/05/05 02:39:57 by smedenec         ###   ########.fr       */
+/*   Updated: 2025/05/23 20:30:34 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
@@ -28,9 +28,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
-/*
-int	main(void)
-{
-	printf("return = %d\n", ft_strncmp("index", "de", 5));
-}
-*/
+// int	main(void)
+// {
+// 	printf("return = %d\n", ft_strncmp("index", "de", 5));
+// }
