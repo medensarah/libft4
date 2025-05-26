@@ -6,22 +6,9 @@
 /*   By: smedenec <smedenec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 16:49:19 by smedenec          #+#    #+#             */
-/*   Updated: 2025/05/27 00:36:31 by smedenec         ###   ########.fr       */
+/*   Updated: 2025/05/27 00:38:44 by smedenec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-// #include <stdio.h>
-// #include <string.h>
-
-// int	ft_strlen(const char *str)
-// {
-// 	int	i;
-
-// 	i = 0;
-// 	while (str[i])
-// 		i++;
-// 	return (i);
-// }
 
 #include "libft.h"
 
