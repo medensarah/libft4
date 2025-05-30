@@ -3,23 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: smedenec <smedenec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 17:45:00 by smedenec          #+#    #+#             */
-/*   Updated: 2025/05/25 06:15:14 by marvin           ###   ########.fr       */
+/*   Updated: 2025/05/30 15:31:46 by smedenec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	is_a_space(char *str, int i)
+static int	is_a_space(const char *str, int i)
 {
-	while (str[i] == ' ' || (str[i] >= 8 && str[i] <= 13))
+	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
 		i++;
 	return (i);
 }
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	int	sign;
 	int	i;
@@ -45,5 +45,5 @@ int	ft_atoi(char *str)
 }
 // int	main(void)
 // {
-// 	printf("mine = %d\natoi = %d\n", ft_atoi("  --27r7"), atoi("   --27r7"));
+// 	printf("mine = %d\natoi = %d\n", ft_atoi("\010 9"), atoi("\010 9"));
 // }
