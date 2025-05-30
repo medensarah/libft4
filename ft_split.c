@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: smedenec <smedenec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/17 13:35:53 by smedenec          #+#    #+#             */
-/*   Updated: 2025/05/25 06:25:21 by marvin           ###   ########.fr       */
+/*   Updated: 2025/05/30 13:54:49 by smedenec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,15 @@ static int	len_string(char *s, char c, int i)
 	int	len_word;
 
 	len_word = 0;
+	if (c == '\0')
+	{
+		while (s[i])
+		{
+		i++;
+		len_word++;
+		}
+		return (len_word);
+	}
 	while ((s[i] != c) && s[i])
 	{
 		i++;
@@ -59,12 +68,12 @@ static int	ft_count_words(char *s, char c)
 
 	i = 0;
 	words = 0;
-	if (c == '\0')
-		return (0);
 	while (s[i] == c)
 		i++;
 	while (s[i])
 	{
+		if (c == '\0')
+		return (0);
 		while ((s[i] != c) && s[i])
 			i++;
 		if ((s[i] == c || !s[i]) && (s[i - 1] != c))
@@ -86,8 +95,6 @@ char	**ft_split(char *s, char c)
 	i = 0;
 	index_word = 0;
 	words = ft_count_words(s, c);
-	if (words == 0)
-		return (NULL);
 	array = (char **)malloc(sizeof(char *) *(words + 1));
 	if (array == NULL)
 		return (NULL);
@@ -100,7 +107,7 @@ char	**ft_split(char *s, char c)
 			return (NULL);
 		i = build_word(array[index_word++], s, len_string(s, c, i), i);
 	}
-	array[index_word] = NULL;
+	array[index_word] = '\0';
 	return (array);
 }
 // int	main(void)
