@@ -6,7 +6,7 @@
 /*   By: smedenec <smedenec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 18:05:43 by smedenec          #+#    #+#             */
-/*   Updated: 2025/05/27 04:54:50 by smedenec         ###   ########.fr       */
+/*   Updated: 2025/05/30 12:37:01 by smedenec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,6 @@ char	*ft_strnstr(char *s1, char *s2, size_t n)
 	j = 0;
 	if (!s1)
 		*s1 = 'X';
-	if (n < ft_strlen(s2))
-		return (NULL);
 	if (ft_strlen(s2) == 0)
 		return (s1);
 	while (s1 && s1[i] && (n > 0))
