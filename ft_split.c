@@ -6,14 +6,14 @@
 /*   By: smedenec <smedenec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/17 13:35:53 by smedenec          #+#    #+#             */
-/*   Updated: 2025/05/30 14:24:34 by smedenec         ###   ########.fr       */
+/*   Updated: 2025/05/30 14:26:17 by smedenec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "libft.h"
-# include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
+// # include <stdlib.h>
+// #include <stdio.h>
+// #include <string.h>
 
 static int	build_word(char *array, char *s, int len_word, int i)
 {
@@ -104,29 +104,29 @@ char	**ft_split(char *s, char c)
 	array[index_word] = NULL;
 	return (array);
 }
-int	main(void)
-{
-	char	s[] = "\0aa\0bbb";
-	char	c;
-	int		i;
-	char	**cpy;
+// int	main(void)
+// {
+// 	char	s[] = "\0aa\0bbb";
+// 	char	c;
+// 	int		i;
+// 	char	**cpy;
 
-	c = '\0';
-	i = 0;
-	cpy = ft_split(s, c);
-	if (cpy)
-	{
-		while (cpy[i])
-		{
-		printf("a split = %s\n", cpy[i]);
-		free(cpy[i]);
-		i++;
-		}
-		free(cpy);
-	}
-	else
-	{
-		printf("a split = %s\n", (char *)cpy);
-	}
-	return (0);
-}
+// 	c = '\0';
+// 	i = 0;
+// 	cpy = ft_split(s, c);
+// 	if (cpy)
+// 	{
+// 		while (cpy[i])
+// 		{
+// 		printf("a split = %s\n", cpy[i]);
+// 		free(cpy[i]);
+// 		i++;
+// 		}
+// 		free(cpy);
+// 	}
+// 	else
+// 	{
+// 		printf("a split = %s\n", (char *)cpy);
+// 	}
+// 	return (0);
+// }
