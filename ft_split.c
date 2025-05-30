@@ -6,11 +6,14 @@
 /*   By: smedenec <smedenec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/17 13:35:53 by smedenec          #+#    #+#             */
-/*   Updated: 2025/05/30 13:54:49 by smedenec         ###   ########.fr       */
+/*   Updated: 2025/05/30 14:24:34 by smedenec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+// #include "libft.h"
+# include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
 
 static int	build_word(char *array, char *s, int len_word, int i)
 {
@@ -30,15 +33,6 @@ static int	len_string(char *s, char c, int i)
 	int	len_word;
 
 	len_word = 0;
-	if (c == '\0')
-	{
-		while (s[i])
-		{
-		i++;
-		len_word++;
-		}
-		return (len_word);
-	}
 	while ((s[i] != c) && s[i])
 	{
 		i++;
@@ -72,8 +66,8 @@ static int	ft_count_words(char *s, char c)
 		i++;
 	while (s[i])
 	{
-		if (c == '\0')
-		return (0);
+		// if (c == '\0')
+		// return (1);
 		while ((s[i] != c) && s[i])
 			i++;
 		if ((s[i] == c || !s[i]) && (s[i - 1] != c))
@@ -107,32 +101,32 @@ char	**ft_split(char *s, char c)
 			return (NULL);
 		i = build_word(array[index_word++], s, len_string(s, c, i), i);
 	}
-	array[index_word] = '\0';
+	array[index_word] = NULL;
 	return (array);
 }
-// int	main(void)
-// {
-// 	char	s[] = "AAA BBB CC DD";
-// 	char	c;
-// 	int		i;
-// 	char	**cpy;
+int	main(void)
+{
+	char	s[] = "\0aa\0bbb";
+	char	c;
+	int		i;
+	char	**cpy;
 
-// 	c = ' ';
-// 	i = 0;
-// 	cpy = ft_split(s, c);
-// 	if (cpy)
-// 	{
-// 		while (cpy[i])
-// 		{
-// 		printf("a split = %s\n", cpy[i]);
-// 		free(cpy[i]);
-// 		i++;
-// 		}
-// 		free(cpy);
-// 	}
-// 	else
-// 	{
-// 		printf("a split = %s\n", (char *)cpy);
-// 	}
-// 	return (0);
-// }
+	c = '\0';
+	i = 0;
+	cpy = ft_split(s, c);
+	if (cpy)
+	{
+		while (cpy[i])
+		{
+		printf("a split = %s\n", cpy[i]);
+		free(cpy[i]);
+		i++;
+		}
+		free(cpy);
+	}
+	else
+	{
+		printf("a split = %s\n", (char *)cpy);
+	}
+	return (0);
+}
