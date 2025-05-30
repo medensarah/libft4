@@ -6,7 +6,7 @@
 /*   By: smedenec <smedenec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 23:02:07 by smedenec          #+#    #+#             */
-/*   Updated: 2025/05/30 15:14:18 by smedenec         ###   ########.fr       */
+/*   Updated: 2025/05/30 16:10:16 by smedenec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,11 @@
 // #include <stdio.h>
 // #include <string.h>
 
-static char	*ft_minint()
+static char	*ft_minint(int n)
 {
 	char			*str_nbr;
 
+	n = n * 1;
 	str_nbr = malloc(sizeof(char) * (10 + 1 + 1));
 	if (str_nbr == NULL)
 		return (NULL);
@@ -35,7 +36,6 @@ static char	*ft_minint()
 	str_nbr[1] = '2';
 	str_nbr[0] = '-';
 	return (str_nbr);
-
 }
 
 static int	len_int(int n)
@@ -61,7 +61,7 @@ char	*ft_itoa(int n)
 
 	neg = 0;
 	if (n == -2147483648)
-		return (ft_minint());
+		return (ft_minint(n));
 	if (n < 0)
 	{
 		neg = 1;

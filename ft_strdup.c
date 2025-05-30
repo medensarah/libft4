@@ -6,13 +6,13 @@
 /*   By: smedenec <smedenec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 18:36:35 by smedenec          #+#    #+#             */
-/*   Updated: 2025/05/27 01:59:39 by smedenec         ###   ########.fr       */
+/*   Updated: 2025/05/30 16:07:28 by smedenec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(char *s)
+char	*ft_strdup(const char *s)
 {
 	char	*ptr;
 	int		j;
