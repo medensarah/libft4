@@ -6,7 +6,7 @@
 /*   By: smedenec <smedenec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 23:02:07 by smedenec          #+#    #+#             */
-/*   Updated: 2025/05/31 14:51:09 by smedenec         ###   ########.fr       */
+/*   Updated: 2025/05/31 16:51:31 by smedenec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,21 +17,7 @@ static char	*ft_minint(int n)
 	char			*str_nbr;
 
 	n = n * 1;
-	str_nbr = malloc(sizeof(char) * (10 + 1 + 1));
-	if (str_nbr == NULL)
-		return (NULL);
-	str_nbr[10 + 1] = '\0';
-	str_nbr[10] = '8';
-	str_nbr[9] = '4';
-	str_nbr[8] = '6';
-	str_nbr[7] = '3';
-	str_nbr[6] = '8';
-	str_nbr[5] = '4';
-	str_nbr[4] = '7';
-	str_nbr[3] = '4';
-	str_nbr[2] = '1';
-	str_nbr[1] = '2';
-	str_nbr[0] = '-';
+	str_nbr = ft_strdup("-2147483648");
 	return (str_nbr);
 }
 
