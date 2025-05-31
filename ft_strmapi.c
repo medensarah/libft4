@@ -3,19 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: smedenec <smedenec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/21 02:05:26 by smedenec          #+#    #+#             */
-/*   Updated: 2025/05/23 20:27:12 by marvin           ###   ########.fr       */
+/*   Updated: 2025/05/31 14:54:12 by smedenec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// char	ft_assign(unsigned int i, char c)
-// {
-// 	return c;
-// }
 char	*ft_strmapi(char *s, char (*f)(unsigned int, char))
 {
 	char			*dest;

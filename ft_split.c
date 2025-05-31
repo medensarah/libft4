@@ -6,14 +6,11 @@
 /*   By: smedenec <smedenec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/17 13:35:53 by smedenec          #+#    #+#             */
-/*   Updated: 2025/05/31 14:22:46 by smedenec         ###   ########.fr       */
+/*   Updated: 2025/05/31 14:52:27 by smedenec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-// # include <stdlib.h>
-// #include <stdio.h>
-// #include <string.h>
 
 static int	build_word(char *array, char *s, int len_word, int i)
 {

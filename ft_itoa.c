@@ -6,14 +6,11 @@
 /*   By: smedenec <smedenec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 23:02:07 by smedenec          #+#    #+#             */
-/*   Updated: 2025/05/30 16:10:16 by smedenec         ###   ########.fr       */
+/*   Updated: 2025/05/31 14:51:09 by smedenec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-// # include <stdlib.h>
-// #include <stdio.h>
-// #include <string.h>
 
 static char	*ft_minint(int n)
 {
