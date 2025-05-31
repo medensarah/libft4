@@ -6,7 +6,7 @@
 /*   By: smedenec <smedenec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 18:36:35 by smedenec          #+#    #+#             */
-/*   Updated: 2025/05/30 16:13:53 by smedenec         ###   ########.fr       */
+/*   Updated: 2025/05/31 12:44:49 by smedenec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	int		i;
 
 	i = 0;
-	s1_ch = s1;
-	s2_ch = s2;
+	s1_ch = (char *)s1;
+	s2_ch = (char *)s2;
 	while (n--)
 	{
 		if (s1_ch[i] == s2_ch[i])
