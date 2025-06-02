@@ -6,7 +6,7 @@
 /*   By: smedenec <smedenec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 18:36:35 by smedenec          #+#    #+#             */
-/*   Updated: 2025/05/31 14:51:00 by smedenec         ###   ########.fr       */
+/*   Updated: 2025/06/02 17:13:15 by smedenec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ void	*ft_calloc(size_t nmemb, size_t size)
 		return (NULL);
 	while (i < nmemb * size)
 		ptr[i++] = 0;
-	ptr[i] = '\0';
 	return ((void *)ptr);
 }
 // int	main(void)

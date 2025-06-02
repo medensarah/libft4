@@ -6,11 +6,13 @@
 /*   By: smedenec <smedenec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/17 13:35:53 by smedenec          #+#    #+#             */
-/*   Updated: 2025/05/31 14:52:27 by smedenec         ###   ########.fr       */
+/*   Updated: 2025/06/02 17:10:33 by smedenec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+// #include "libft.h"
+#include <stdlib.h>
+#include <stdio.h>
 
 static int	build_word(char *array, char *s, int len_word, int i)
 {
@@ -100,3 +102,19 @@ char	**ft_split(char *s, char c)
 	array[index_word] = NULL;
 	return (array);
 }
+// int	main(void)
+// {
+// 	int		i;
+// 	char	*simple;
+// 	char	**dooble;
+
+// 	i = 0;
+// 	simple = "initiation";
+// 	dooble = ft_split(simple, 'i');
+// 	while (dooble[i])
+// 	{
+// 		printf("chain %d :%s\n", i, dooble[i]);
+// 		i++;
+// 	}
+
+// }

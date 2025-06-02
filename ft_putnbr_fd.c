@@ -6,14 +6,14 @@
 /*   By: smedenec <smedenec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/31 14:56:53 by smedenec          #+#    #+#             */
-/*   Updated: 2025/05/31 16:43:08 by smedenec         ###   ########.fr       */
+/*   Updated: 2025/05/31 18:33:32 by smedenec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include "libft.h"
 #include <unistd.h>
 
-static void ft_putchar(char c, int fd)
+static void	ft_putchar(char c, int fd)
 {
 	write(fd, &c, 1);
 }
