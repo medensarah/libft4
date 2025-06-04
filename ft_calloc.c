@@ -6,7 +6,7 @@
 /*   By: smedenec <smedenec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 18:36:35 by smedenec          #+#    #+#             */
-/*   Updated: 2025/06/02 17:13:15 by smedenec         ###   ########.fr       */
+/*   Updated: 2025/06/04 04:35:12 by smedenec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	size_t	i;
-	char	*ptr;
+	size_t			i;
+	unsigned char	*ptr;
 
 	i = 0;
-	if (size * nmemb > 2147483647)
+	if (size != 0 && nmemb > (size_t) - 1 / size)
 		return (NULL);
 	ptr = malloc(size * nmemb);
 	if (ptr == NULL)
