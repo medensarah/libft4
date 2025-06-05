@@ -3,15 +3,15 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: smedenec <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: smedenec <smedenec@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/31 18:54:34 by smedenec          #+#    #+#              #
-#    Updated: 2025/05/31 18:54:44 by smedenec         ###   ########.fr        #
+#    Updated: 2025/06/06 01:12:00 by smedenec         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-CC = gcc
+CC = cc
 CFLAGS = -Wall -Wextra -Werror
 SRCS = ft_atoi.c ft_bzero.c ft_calloc.c \
 	ft_isalnum.c ft_isalpha.c ft_isascii.c \
